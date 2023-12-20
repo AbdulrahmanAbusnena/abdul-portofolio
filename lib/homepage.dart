@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
         actions: [
           TextButton(onPressed: () {}, child: Text('Contact Me')),
           TextButton(onPressed: () {}, child: Text('About')),
-        ],
+        ], 
       ),
       body: Container(
         child: Column(
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SvgPicture.asset(
-                  'assets/abdul.jpg',
+                  'assets/abdul.png',
                   height: 55,
                   width: 55,
                 ),
