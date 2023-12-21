@@ -33,12 +33,11 @@ class _HomePageState extends State<HomePage> {
           name,
           style: GoogleFonts.rubik(fontWeight: FontWeight.bold, fontSize: 25),
         ),
-        centerTitle: true,
+        // centerTitle: true,
         leading: CircleAvatar(
-          child: Image.asset(
-            'assets/ab.jpg',
-          ),
-        ),
+            backgroundImage: AssetImage(
+          'assets/ab.jpg',
+        )),
         actions: [
           TextButton(
               onPressed: () {
@@ -47,26 +46,30 @@ class _HomePageState extends State<HomePage> {
               },
               child: const Text('Contact Me')),
           TextButton(
-              onPressed: () {
-                // ignore: avoid_print
-              },
-              child: const Text('About')),
+            onPressed: () {
+              // ignore: avoid_print
+            },
+            child: const Text('About me'),
+          ),
           TextButton(
             onPressed: () {},
             child: const Text('Blog'),
-          )
+          ),
+          TextButton(onPressed: () {}, child: const Text('Projects')),
         ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Column(
-            //  crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/abdul.png',
-                // height: 55,
-                // width: 55,
+              Center(
+                child: Image.asset(
+                  'assets/abdul.png',
+                  height: 200,
+                  // idth: 25,
+                ),
               ),
             ],
           ),
@@ -79,16 +82,19 @@ class _HomePageState extends State<HomePage> {
           ),
           Divider(),
           Container(
-              alignment: Alignment.center,
+              //    alignment: Alignment.center,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text(overview,
-                        style: GoogleFonts.rubik(
-                            fontSize: 18, fontWeight: FontWeight.normal)),
+                    Text(
+                      overview,
+                      style: GoogleFonts.rubik(
+                          fontSize: 12, fontWeight: FontWeight.normal),
+                      // overflow: TextOverflow.ellipsis,
+                    ),
                   ]))
         ],
       ),
