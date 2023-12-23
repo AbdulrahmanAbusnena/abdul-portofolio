@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 //import 'package:abdul/main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:abdul/overview.dart';
@@ -16,15 +17,6 @@ class _HomePageState extends State<HomePage> {
   final name = 'Abdulrahman Abusnena';
   final jobTitle = 'Software Developer';
 
-  final intro = '';
-  final skills = [
-    'Mobile development',
-    'Flutter & dart',
-    'C++',
-    'Git',
-    'Github'
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,69 +26,100 @@ class _HomePageState extends State<HomePage> {
           style: GoogleFonts.rubik(fontWeight: FontWeight.bold, fontSize: 25),
         ),
         // centerTitle: true,
-        leading: CircleAvatar(
+        leading: const CircleAvatar(
             backgroundImage: AssetImage(
-          'assets/ab.jpg',
+          'assets/abdul.png',
         )),
         actions: [
           TextButton(
               onPressed: () {
                 // ignore: avoid_print
-                print('Contact Me is Pressed');
+                print('About Me is Pressed');
               },
-              child: const Text('Contact Me')),
+              child: const Text('About Me')),
           TextButton(
             onPressed: () {
               // ignore: avoid_print
+              print('Contact me is Pressed');
             },
-            child: const Text('About me'),
+            child: const Text('Contact me'),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              //ignore: avoid_print
+              print('Blog is Pressed');
+            },
             child: const Text('Blog'),
           ),
-          TextButton(onPressed: () {}, child: const Text('Projects')),
+          TextButton(
+              onPressed: () {
+                // ignore: avoid_print
+                print('Project is Pressed');
+              },
+              child: const Text('Projects')),
         ],
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Center(
-                child: Image.asset(
-                  'assets/abdul.png',
-                  height: 200,
-                  // idth: 25,
+      body: SingleChildScrollView(
+        child: Column(
+          //  crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ClipOval(
+                  child: SizedBox.fromSize(
+                    size: const Size.fromRadius(48),
+                    child: Image.asset('assets/abdul.png', fit: BoxFit.cover),
+                  ),
                 ),
-              ),
-            ],
-          ),
-          Text(
-            '$name  - $jobTitle',
-            style: GoogleFonts.rubik(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
+              ],
             ),
-          ),
-          Divider(),
-          Container(
-              //    alignment: Alignment.center,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      overview,
-                      style: GoogleFonts.rubik(
-                          fontSize: 12, fontWeight: FontWeight.normal),
-                      // overflow: TextOverflow.ellipsis,
+            const SizedBox(
+              height: 35,
+            ),
+            Column(
+              //  crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Animate(
+                  effects: const [FadeEffect(), SlideEffect()],
+                  child: Text(
+                    '   $name  - $jobTitle', //
+                    style: GoogleFonts.rubik(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
                     ),
-                  ]))
-        ],
+                    // textAlign: TextAlign.start
+                  ),
+                )
+              ],
+            ),
+            const Divider(
+              height: 25,
+              endIndent: 405,
+              indent: 405,
+            ),
+            Container(
+                //     alignment: Alignment.center,
+                // height: 10,
+                width: 450,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: Colors.white70, width: 3)),
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        intro,
+                        style: GoogleFonts.rubik(
+                            fontSize: 15, fontWeight: FontWeight.normal),
+                        // overflow: TextOverflow.ellipsis,
+                        //     textAlign: TextAlign.center,
+                        //   overflow: TextOverflow.ellipsis,
+                        // maxLines: 20,
+                      ),
+                    ])),
+          ],
+        ),
       ),
     );
   }

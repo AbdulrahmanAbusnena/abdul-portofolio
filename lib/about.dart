@@ -1,4 +1,6 @@
+import 'package:abdul/themes_colors/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class AboutPage extends StatefulWidget {
   const AboutPage({super.key});
@@ -11,8 +13,17 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        child: Column(),
+      body: SingleChildScrollView(
+        child: Container(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text('About Me',
+                style: GoogleFonts.rubik(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                )),
+          ]),
+        ),
       ),
     );
   }

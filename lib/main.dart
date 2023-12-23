@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:abdul/homepage.dart';
+import 'package:abdul/themes_colors/theme.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,7 +14,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Abdulrahman Abusnena',
-      theme: ThemeData(useMaterial3: true),
+      theme: darkMode,
       //  routes:
       home: const HomePage(),
     );
