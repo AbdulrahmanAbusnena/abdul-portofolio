@@ -19,6 +19,7 @@ class _AboutPageState extends State<AboutPage> {
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               )),
+          //    Text('Abdulrhaman abisnen'),
         ]),
       ),
     );
