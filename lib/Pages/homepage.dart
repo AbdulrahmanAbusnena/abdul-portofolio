@@ -101,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     // textAlign: TextAlign.start
                   ),
-                )
+                ).fade(delay: 500.ms).slide(curve: Curves.easeIn),
               ],
             ),
             const Divider(

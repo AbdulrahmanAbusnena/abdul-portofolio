@@ -14,12 +14,34 @@ class _AboutPageState extends State<AboutPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Text('About Me',
-              style: GoogleFonts.rubik(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              )),
-          //    Text('Abdulrhaman abisnen'),
+          Column(
+            // crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(' About Me',
+                  style: GoogleFonts.rubik(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  )),
+            ],
+          ),
+          Row(
+            //  crossAxisAlignment: CrossAxisAlignment.start,
+            //  mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              ClipOval(
+                child: SizedBox.fromSize(
+                  size: const Size.fromRadius(23),
+                  child: Image.asset('assets/abdul.png', fit: BoxFit.cover),
+                ),
+              ),
+              Text(
+                'Abdulrahman Abusnena',
+                style: GoogleFonts.montserrat(
+                  fontSize: 20,
+                ),
+              ),
+            ],
+          ),
         ]),
       ),
     );
