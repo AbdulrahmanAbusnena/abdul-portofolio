@@ -1,3 +1,4 @@
+import 'package:abdul/aboutme_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 //import 'package:abdul/main.dart';
@@ -33,8 +34,8 @@ class _HomePageState extends State<HomePage> {
         actions: [
           TextButton(
               onPressed: () {
-                // ignore: avoid_print
-                print('About Me is Pressed');
+                Navigator.push(context,
+                    MaterialPageRoute(builder: ((context) => AboutPage())));
               },
               child: const Text('About Me')),
           TextButton(
