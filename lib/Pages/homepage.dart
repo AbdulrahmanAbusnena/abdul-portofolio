@@ -1,4 +1,7 @@
-import 'package:abdul/aboutme_page.dart';
+import 'package:abdul/Pages/aboutme_page.dart';
+import 'package:abdul/Pages/blog.dart';
+import 'package:abdul/Pages/contactme_page.dart';
+import 'package:abdul/Pages/projects.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 //import 'package:abdul/main.dart';
@@ -34,28 +37,35 @@ class _HomePageState extends State<HomePage> {
         actions: [
           TextButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: ((context) => AboutPage())));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const AboutPage())));
               },
               child: const Text('About Me')),
           TextButton(
             onPressed: () {
-              // ignore: avoid_print
-              print('Contact me is Pressed');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: ((context) => const ContactPage())),
+              );
             },
             child: const Text('Contact me'),
           ),
           TextButton(
             onPressed: () {
               //ignore: avoid_print
-              print('Blog is Pressed');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (((context) => const Blog()))));
             },
             child: const Text('Blog'),
           ),
           TextButton(
               onPressed: () {
-                // ignore: avoid_print
-                print('Project is Pressed');
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: ((context) => const Projects())));
               },
               child: const Text('Projects')),
         ],
