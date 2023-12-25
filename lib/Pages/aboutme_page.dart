@@ -13,36 +13,75 @@ class _AboutPageState extends State<AboutPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(' About Me',
-                  style: GoogleFonts.rubik(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ],
-          ),
-          Row(
-            //  crossAxisAlignment: CrossAxisAlignment.start,
-            //  mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              ClipOval(
-                child: SizedBox.fromSize(
-                  size: const Size.fromRadius(23),
-                  child: Image.asset('assets/abdul.png', fit: BoxFit.cover),
+        child: Center(
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+            Column(
+              children: [
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
-              Text(
-                'Abdulrahman Abusnena',
-                style: GoogleFonts.montserrat(
-                  fontSize: 20,
+                ClipOval(
+                  child: SizedBox.fromSize(
+                    size: const Size.fromRadius(30),
+                    child: Image.asset('assets/abdul.png', fit: BoxFit.cover),
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ]),
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'Abdulrahman Abusnena',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 20,
+                  ),
+                ),
+                const Divider(
+                  indent: 130,
+                  endIndent: 130,
+                ),
+                const Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Text
+                    Text('About'),
+                    // Divider
+                    Divider(
+                      indent: 405,
+                      endIndent: 405,
+                    ),
+                    // SizedBox
+                    SizedBox(
+                      height: 20,
+                    ),
+                    //Text
+                    Text('Connect'),
+                    // Divider
+                    Divider(
+                      indent: 405,
+                      endIndent: 405,
+                    ),
+                    //  SizedBox
+                    SizedBox(
+                      height: 20,
+                    ),
+                    // Text
+                    Text('Experience'),
+                    // Divider
+                    Divider(
+                      indent: 405,
+                      endIndent: 405,
+                    ),
+                    // SizedBox
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ]),
+        ),
       ),
     );
   }
