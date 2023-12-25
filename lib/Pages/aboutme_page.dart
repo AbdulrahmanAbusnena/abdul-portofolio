@@ -1,3 +1,4 @@
+import 'package:abdul/overview.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,10 @@ class _AboutPageState extends State<AboutPage> {
                 ClipOval(
                   child: SizedBox.fromSize(
                     size: const Size.fromRadius(30),
-                    child: Image.asset('assets/abdul.png', fit: BoxFit.cover),
+                    child: Image.asset(
+                      'assets/abdul.png',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -37,45 +41,73 @@ class _AboutPageState extends State<AboutPage> {
                   ),
                 ),
                 const Divider(
-                  indent: 130,
-                  endIndent: 130,
+                  indent: 340,
+                  endIndent: 340,
                 ),
-                const Row(
+                const SizedBox(
+                  height: 30,
+                ),
+                /*  
+                  Main Content Body,  
+                  */
+                Row(
+                  children: [
+                    Row(
+                      //   crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Text
+                        Text('About',
+                            style: GoogleFonts.montserrat(
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                                color: Colors.blueGrey)),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Text(
+                      about,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 10,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ],
+                ),
+                const Divider(
+                  indent: 405,
+                  endIndent: 405,
+                ),
+                const Row(
+                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     // Text
-                    Text('About'),
-                    // Divider
-                    Divider(
-                      indent: 405,
-                      endIndent: 405,
-                    ),
-                    // SizedBox
-                    SizedBox(
-                      height: 20,
-                    ),
-                    //Text
                     Text('Connect'),
-                    // Divider
-                    Divider(
-                      indent: 405,
-                      endIndent: 405,
-                    ),
-                    //  SizedBox
-                    SizedBox(
-                      height: 20,
-                    ),
+                  ],
+                ),
+                const Divider(
+                  indent: 405,
+                  endIndent: 405,
+                ),
+                const Row(
+                    //    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Text
+                      Text('Work'),
+                    ]),
+                const Divider(
+                  indent: 405,
+                  endIndent: 405,
+                ),
+                const Row(
+                  //   crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
                     // Text
                     Text('Experience'),
-                    // Divider
-                    Divider(
-                      indent: 405,
-                      endIndent: 405,
-                    ),
-                    // SizedBox
-                    SizedBox(
-                      height: 20,
-                    ),
                   ],
                 ),
               ],

@@ -6,6 +6,8 @@ ThemeData light = ThemeData(
     colorScheme: ColorScheme.light());
 
 ThemeData darkMode = ThemeData(
-    brightness: Brightness.dark,
-    useMaterial3: true,
-    colorScheme: ColorScheme.dark());
+  brightness: Brightness.dark,
+  useMaterial3: true,
+  colorScheme: const ColorScheme.dark(),
+  textTheme: const TextTheme(),
+);
