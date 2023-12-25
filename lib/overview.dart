@@ -12,7 +12,20 @@ String intro =
     '''I am  mobile developer specializing in Flutter. Fluent in English and Arabic as my native language, I possess strong communication skills and cultural understanding. I'm also currently learning French. Beyond coding, I have a genuine passion for continuous learning, reading, and expanding my knowledge across different subjects. I'm excited to take on new projects, startups, or job opportunities, collaborating with motivated teams to bring ideas to life. In addition to my technical expertise, I'm driven to deliver high-quality work, exceed expectations, and thrive in dynamic environments. I value effective teamwork and aim to contribute my skills and experience to your projects, startups, or job opportunities. Let's connect and collaborate to turn ideas into reality. I'm enthusiastic about exploring new opportunities and making a positive impact in mobile app development''';
 
 String about = ''' 
-    Hello World, I am abdul, and I am mobile developer spercilaized in Flutter With a year of experience
-    Fluent in English and Arabic as my native language, I possess strong communication skills and cultural understanding. 
-    I'm also currently learning French. Beyond coding, 
-    I have a genuine passion for continuous learning, reading, and expanding my knowledge across different subjects.  ''';
+   Hello World, I am Abdulrahman!, 
+   I'm a mobile developer who loves building and creating apps. 
+   Continuous learning is a big part of my life, 
+   and I enjoy staying updated by reading and educating myself. 
+   My passion lies in developing innovative mobile applications that provide valuable experiences to users. 
+   I'm dedicated to pushing the boundaries of mobile technology and making a positive impact in the app development industry.  ''';
+
+String connect = '''  
+
+Have a question or just want to chat? Feel free to email me. Try finding me anywhere else at @abdulrahmanabusnena
+''';
+
+String work = ''' 1+ year of experience in mobile app development.
+                I more than excited to create an app for you or join your startup,  
+                if you want to connect don't hasistate and email me!!
+
+ ''';
