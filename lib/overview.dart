@@ -19,13 +19,10 @@ String about = '''
    My passion lies in developing innovative mobile applications that provide valuable experiences to users. 
    I'm dedicated to pushing the boundaries of mobile technology and making a positive impact in the app development industry.  ''';
 
-String connect = '''  
+String connect =
+    '''Have a question or just want to chat? Feel free to email me. Try finding me anywhere else at @abdulrahmanabusnena.''';
 
-Have a question or just want to chat? Feel free to email me. Try finding me anywhere else at @abdulrahmanabusnena
-''';
-
-String work = ''' 1+ year of experience in mobile app development.
-                I more than excited to create an app for you or join your startup,  
-                if you want to connect don't hasistate and email me!!
-
- ''';
+String work = '''  
+    1+ year of experience in mobile app development.
+    I more than excited to create an app for you or join your startup,  
+    if you want to connect don't hasistate and email me!!. ''';

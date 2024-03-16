@@ -17,7 +17,7 @@ class _ProjectsState extends State<Projects> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Projects',
+              'Serivce Not Available',
               style: GoogleFonts.rubik(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,

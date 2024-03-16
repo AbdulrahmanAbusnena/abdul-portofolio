@@ -11,7 +11,7 @@ class AboutPage extends StatefulWidget {
 }
 
 class _AboutPageState extends State<AboutPage> {
-  var email_me = TextButton(
+  var emailme = TextButton(
     onPressed: () {},
     child: Text('Email me'),
   );
@@ -35,7 +35,7 @@ class _AboutPageState extends State<AboutPage> {
                       fit: BoxFit.cover,
                     ),
                   ),
-                ),
+                ).animate().slide(delay: 500.ms).then().shake(hz: 11),
                 const SizedBox(
                   height: 20,
                 ),
@@ -44,13 +44,19 @@ class _AboutPageState extends State<AboutPage> {
                   style: GoogleFonts.montserrat(
                     fontSize: 20,
                   ),
-                ).animate().fade().slide(curve: Curves.easeIn),
+                )
+                    .animate()
+                    .fade()
+                    .slide(curve: Curves.easeIn)
+                    .then()
+                    .shake(delay: 500.ms),
                 const Divider(
                   indent: 340,
                   endIndent: 340,
+                  color: Colors.blueGrey,
                 ),
                 const SizedBox(
-                  height: 30,
+                  height: 45,
                 ),
                 /*  
                   Main Content Body,  
@@ -62,75 +68,116 @@ class _AboutPageState extends State<AboutPage> {
                   children: [
                     // Text
                     Text('  About',
-                        style: GoogleFonts.montserrat(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.blueGrey)),
+                            style: GoogleFonts.montserrat(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.blueGrey))
+                        .animate()
+                        .fade()
+                        .slideY(
+                          curve: Curves.easeIn,
+                        ),
+
                     const SizedBox(
                       width: 120,
                     ),
                     Text(
                       about,
                       style: GoogleFonts.montserrat(
-                        fontSize: 10,
+                        fontSize: 16,
                         fontWeight: FontWeight.normal,
                       ),
-                    ),
+                    )
                   ],
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 const Divider(
-                  indent: 405,
-                  endIndent: 405,
+                  indent: 225,
+                  endIndent: 500,
+                  color: Colors.blueGrey,
+                ),
+                const SizedBox(
+                  height: 70,
                 ),
                 Row(
                   // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Text
-                    Text('Connect',
-                        style: GoogleFonts.montserrat(
-                            fontSize: 16,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.blueGrey)),
-                    SizedBox(
+                    Text(' Connect',
+                            style: GoogleFonts.montserrat(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.blueGrey))
+                        .animate()
+                        .fade()
+                        .slideY(
+                          curve: Curves.easeIn,
+                        ),
+
+                    const SizedBox(
                       width: 120,
                     ),
 
                     Text(connect,
                         style: GoogleFonts.montserrat(
-                          fontSize: 10,
+                          fontSize: 16,
                           fontWeight: FontWeight.normal,
                           //   color: Colors.blueGrey
-                        )),
+                        ))
                   ],
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 const Divider(
-                  indent: 405,
-                  endIndent: 405,
+                  indent: 225,
+                  endIndent: 500,
+                  color: Colors.blueGrey,
+                ),
+                const SizedBox(
+                  height: 70,
                 ),
                 Row(
+
                     //    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // Text
-                      Text('Work',
-                          style: GoogleFonts.montserrat(
-                              fontSize: 16,
-                              fontWeight: FontWeight.normal,
-                              color: Colors.blueGrey)),
+                      Text('  Work',
+                              style: GoogleFonts.montserrat(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.blueGrey))
+                          .animate()
+                          .fade()
+                          .slideY(
+                            curve: Curves.easeIn,
+                          ),
+
                       const SizedBox(
-                        height: 120,
+                        width: 120,
                       ),
                       Text(
                         work,
                         style: GoogleFonts.montserrat(
-                          fontSize: 10,
+                          fontSize: 16,
                           fontWeight: FontWeight.normal,
                         ),
-                      ),
+                      )
                     ]),
-                const Divider(
-                  indent: 405,
-                  endIndent: 405,
+                const SizedBox(
+                  height: 10,
                 ),
+                const Divider(
+                  indent: 225,
+                  endIndent: 500,
+                  color: Colors.blueGrey,
+                ),
+                const SizedBox(
+                  height: 70,
+                ),
+
                 /* Row(
                   //   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

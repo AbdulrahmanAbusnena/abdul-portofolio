@@ -45,6 +45,7 @@ dependencies:
   firebase_auth: ^4.15.3
   firebase_database: ^10.3.8
   firebase_dynamic_links: ^5.4.8
+  http: ^1.1.0 
 
 dev_dependencies:
   flutter_test:

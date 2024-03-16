@@ -17,7 +17,7 @@ class _ContactPageState extends State<ContactPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Contact',
+              'Serivce Not Available',
               style: GoogleFonts.rubik(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,

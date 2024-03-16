@@ -17,7 +17,7 @@ class _BlogState extends State<Blog> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'Blog',
+              'Serivce Not Available',
               style: GoogleFonts.rubik(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,

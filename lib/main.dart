@@ -3,11 +3,11 @@ import 'package:abdul/Pages/homepage.dart';
 import 'package:abdul/themes_colors/theme.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp( MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+   MainApp({super.key}); 
 
   @override
   Widget build(BuildContext context) {
@@ -15,8 +15,9 @@ class MainApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Abdulrahman Abusnena',
       theme: darkMode,
-      //  routes:
+
+      // routes: '/home'
       home: const HomePage(),
     );
-  }
+  } 
 }

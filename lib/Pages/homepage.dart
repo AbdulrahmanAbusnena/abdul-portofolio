@@ -27,13 +27,14 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(
           name,
-          style: GoogleFonts.rubik(fontWeight: FontWeight.bold, fontSize: 25),
-        ),
+          style:
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 25),
+        ).animate().fade().slideY(curve: Curves.easeIn),
         // centerTitle: true,
         leading: const CircleAvatar(
             backgroundImage: AssetImage(
           'assets/abdul.png',
-        )),
+        )).animate().fade().shake(),
         actions: [
           TextButton(
               onPressed: () {
@@ -42,7 +43,12 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(
                         builder: ((context) => const AboutPage())));
               },
-              child: const Text('About Me')),
+              child: Text('About Me',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.blueGrey,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                  ))),
           TextButton(
             onPressed: () {
               Navigator.push(
@@ -50,7 +56,12 @@ class _HomePageState extends State<HomePage> {
                 MaterialPageRoute(builder: ((context) => const ContactPage())),
               );
             },
-            child: const Text('Contact me'),
+            child: Text('Contact me',
+                style: GoogleFonts.montserrat(
+                  color: Colors.blueGrey,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                )),
           ),
           TextButton(
             onPressed: () {
@@ -58,7 +69,12 @@ class _HomePageState extends State<HomePage> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (((context) => const Blog()))));
             },
-            child: const Text('Blog'),
+            child: Text('Blog',
+                style: GoogleFonts.montserrat(
+                  color: Colors.blueGrey,
+                  fontSize: 17,
+                  fontWeight: FontWeight.w500,
+                )),
           ),
           TextButton(
               onPressed: () {
@@ -67,7 +83,12 @@ class _HomePageState extends State<HomePage> {
                     MaterialPageRoute(
                         builder: ((context) => const Projects())));
               },
-              child: const Text('Projects')),
+              child: Text('Projects',
+                  style: GoogleFonts.montserrat(
+                    color: Colors.blueGrey,
+                    fontSize: 17,
+                    fontWeight: FontWeight.w500,
+                  ))),
         ],
       ),
       body: SingleChildScrollView(
@@ -82,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                     size: const Size.fromRadius(48),
                     child: Image.asset('assets/abdul.png', fit: BoxFit.cover),
                   ),
-                ),
+                ).animate().shake(),
               ],
             ),
             const SizedBox(
@@ -101,7 +122,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     // textAlign: TextAlign.start
                   ),
-                ).fade(delay: 500.ms).slide(curve: Curves.easeIn),
+                ).animate().shake(),
               ],
             ),
             const Divider(
@@ -115,13 +136,13 @@ class _HomePageState extends State<HomePage> {
                 width: 450,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: Colors.white70, width: 3)),
+                    border: Border.all(color: Colors.blueGrey, width: 3)),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         intro,
-                        style: GoogleFonts.rubik(
+                        style: GoogleFonts.montserrat(
                             fontSize: 15, fontWeight: FontWeight.normal),
                         // overflow: TextOverflow.ellipsis,
                         //     textAlign: TextAlign.center,
