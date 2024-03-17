@@ -42,3 +42,13 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+assets/
+lib/main.dart 
+ios/
+linux/ 
+test/
+public/
+macos/
+web/ 
+firebase.json 
